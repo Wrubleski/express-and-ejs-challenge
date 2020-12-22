@@ -1,5 +1,5 @@
 # express-and-ejs-challenge
-Projeto feito afim de aprender a utilizar rotas dinâmicas no express, usando Route parameters, bem como persistência utilizando o mongoDB.
+Projeto feito afim de aprender a utilizar rotas dinâmicas no express, usando route parameters, bem como persistência utilizando o mongoDB.
 
 O projeto não possui autenticação, pois quando foi feito, ainda não tinha conhecimento sobre o assunto, sendo assim, qualquer um pode postar usando a rota /compose
 
