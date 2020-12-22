@@ -1,9 +1,8 @@
 //jshint esversion:6
-
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const { forEach } = require("lodash");
 const _ = require("lodash");
 const mongoose = require("mongoose");
 
@@ -17,7 +16,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://admin-wrubleski:123qazWSX@cluster0.4pqww.mongodb.net/blogDB", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.MONGO_CONNECT_STRING, {useNewUrlParser: true, useUnifiedTopology: true});
 
 const postSchema = new mongoose.Schema({
   title: String,
